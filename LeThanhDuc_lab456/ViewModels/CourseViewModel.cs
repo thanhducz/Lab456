@@ -8,6 +8,7 @@ namespace LeThanhDuc_lab456.ViewModels
 {
     public class CourseViewModel
     {
+
         
             public string Place { get; set; }
             public string Date { get; set; }
