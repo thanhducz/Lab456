@@ -7,9 +7,9 @@ namespace LeThanhDuc_lab456.Migrations
     {
         public override void Up()
         {
-            Sql("INSERT INTO Categories (ID, NAME) VALUES (1,'Development')");
-            Sql("INSERT INTO Categories (ID, NAME) VALUES (2,'Business')");
-            Sql("INSERT INTO Categories (ID, NAME) VALUES (3,'Maketting')");
+            Sql("INSERT INTO CATEGORIES (ID, NAME) VALUES (1,'Development')");
+            Sql("INSERT INTO CATEGORIES (ID, NAME) VALUES (2,'Business')");
+            Sql("INSERT INTO CATEGORIES (ID, NAME) VALUES (3,'Maketing')");
         }
         
         public override void Down()

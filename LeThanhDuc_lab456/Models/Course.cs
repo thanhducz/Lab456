@@ -16,7 +16,7 @@ namespace LeThanhDuc_lab456.Models
         [StringLength(255)]
         public string Place { get; set; }
         public DateTime DateTime { get; set; }
-        public ApplicationDbContext Category { get; set; }
+        public IEnumerable<Category> Categories { get; set; }
         [Required]
         public byte CategoryId { get; set; }
        
