@@ -11,6 +11,8 @@ namespace LeThanhDuc_lab456.Models
     {
         public DbSet<Course> Courses { get; set; }
         public DbSet<Category>  Categories { get; set; }
+
+        public DbSet<Attendance> Ateendances { get; set; }
         public ApplicationDbContext()
             : base("DefaultConnection", throwIfV1Schema: false)
         {
@@ -20,5 +22,13 @@ namespace LeThanhDuc_lab456.Models
         {
             return new ApplicationDbContext();
         }
-    }
+        protected override void OnModelCreating(DbModelBuilder modelBuilder)
+        {
+            base.OnModelCreating(modelBuilder);
+            modelBuilder.Entity<Attendance>()
+                .HasRequired(a => a.Course)
+                .WithMany()
+                .WillCascadeOnDelete(false);
+        }
+        }
 }
