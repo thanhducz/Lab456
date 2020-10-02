@@ -1,4 +1,5 @@
-name: tao vlan
+---
+- name: tao vlan
   hosts: all
   gather_facts: no
 
